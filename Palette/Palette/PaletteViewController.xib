@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaletteViewController" customModule="Palette" customModuleProvider="target">
+            <connections>
+                <outlet property="alphaSlider" destination="Xzf-hv-sIP" id="SIy-pS-rPj"/>
+                <outlet property="alphaTextField" destination="34d-Gr-aiy" id="guh-S0-GGv"/>
+                <outlet property="blueSlider" destination="EZJ-GK-OES" id="oIM-Nk-DOS"/>
+                <outlet property="blueTextField" destination="tqJ-SS-c2c" id="CPK-9X-xTm"/>
+                <outlet property="greenSlider" destination="3MP-nd-nsu" id="pTa-Sw-tGT"/>
+                <outlet property="greenTextField" destination="0wr-6H-Yw5" id="7rJ-qh-Ega"/>
+                <outlet property="paletteView" destination="tMr-Qy-efY" id="Tdz-f9-goS"/>
+                <outlet property="redSlider" destination="Ka6-KN-cUq" id="jFK-tP-qaL"/>
+                <outlet property="redTextField" destination="stE-AU-heW" id="gsz-hm-lju"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="tUu-Vo-lqc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMr-Qy-efY">
+                    <rect key="frame" x="75.666666666666686" y="109" width="240" height="240"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="997-a2-eN2"/>
+                        <constraint firstAttribute="width" constant="240" id="yA9-f1-ADL"/>
+                        <constraint firstAttribute="height" constant="240" id="yqY-dz-9gj"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="VTg-pz-CIZ">
+                    <rect key="frame" x="47" y="399" width="297" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="stE-AU-heW">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="0bs-bt-hj7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldEditingChanged:" destination="-1" eventType="editingChanged" id="7mo-Iy-ueZ"/>
+                            </connections>
+                        </textField>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="Ka6-KN-cUq">
+                            <rect key="frame" x="95" y="0.0" width="204" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="Q28-sQ-WKv"/>
+                            </constraints>
+                            <connections>
+                                <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="6Xt-tG-YQf"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="pfP-as-sp8">
+                    <rect key="frame" x="47" y="567" width="297" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tqJ-SS-c2c">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="5QL-Mh-Nkd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldEditingChanged:" destination="-1" eventType="editingChanged" id="kAO-pS-Aed"/>
+                            </connections>
+                        </textField>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-GK-OES">
+                            <rect key="frame" x="95" y="0.0" width="204" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="n8R-Ur-jqz"/>
+                            </constraints>
+                            <connections>
+                                <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="zYL-Y8-Oap"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="jsJ-pS-qdP">
+                    <rect key="frame" x="47" y="651" width="297" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="34d-Gr-aiy">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="LN0-yU-DOS"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldEditingChanged:" destination="-1" eventType="editingChanged" id="Nbp-bg-oD5"/>
+                            </connections>
+                        </textField>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xzf-hv-sIP">
+                            <rect key="frame" x="95" y="0.0" width="204" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="dHG-ub-nMa"/>
+                            </constraints>
+                            <connections>
+                                <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="CtF-sY-dnt"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="eiq-A7-6qV">
+                    <rect key="frame" x="47" y="483" width="297" height="34"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0wr-6H-Yw5">
+                            <rect key="frame" x="0.0" y="0.0" width="70" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="gg6-OA-TPi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <action selector="textFieldEditingChanged:" destination="-1" eventType="editingChanged" id="Yuv-De-4aL"/>
+                            </connections>
+                        </textField>
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" translatesAutoresizingMaskIntoConstraints="NO" id="3MP-nd-nsu">
+                            <rect key="frame" x="95" y="0.0" width="204" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="9jC-s8-n1K"/>
+                            </constraints>
+                            <connections>
+                                <action selector="sliderValueChanged:" destination="-1" eventType="valueChanged" id="BpQ-fH-zFM"/>
+                            </connections>
+                        </slider>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pfP-as-sp8" secondAttribute="trailing" constant="47" id="1CP-Y2-VkI"/>
+                <constraint firstItem="tMr-Qy-efY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="93t-sZ-QuC"/>
+                <constraint firstItem="VTg-pz-CIZ" firstAttribute="top" secondItem="tMr-Qy-efY" secondAttribute="bottom" constant="50" id="CGR-Va-mgB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jsJ-pS-qdP" secondAttribute="trailing" constant="47" id="CMN-ii-BVh"/>
+                <constraint firstItem="tMr-Qy-efY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="DVQ-YO-teE"/>
+                <constraint firstItem="VTg-pz-CIZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="47" id="H5u-Uv-0p2"/>
+                <constraint firstItem="pfP-as-sp8" firstAttribute="top" secondItem="eiq-A7-6qV" secondAttribute="bottom" constant="50" id="UGm-Cv-zcO"/>
+                <constraint firstItem="eiq-A7-6qV" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="47" id="Xd8-Ge-1Rs"/>
+                <constraint firstItem="jsJ-pS-qdP" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="47" id="bjj-oe-dJw"/>
+                <constraint firstItem="pfP-as-sp8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="47" id="jPu-0z-0y8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="VTg-pz-CIZ" secondAttribute="trailing" constant="47" id="oKW-CE-PbK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eiq-A7-6qV" secondAttribute="trailing" constant="47" id="p4j-KV-kfR"/>
+                <constraint firstItem="jsJ-pS-qdP" firstAttribute="top" secondItem="pfP-as-sp8" secondAttribute="bottom" constant="50" id="pWf-bw-Mtj"/>
+                <constraint firstItem="eiq-A7-6qV" firstAttribute="top" secondItem="VTg-pz-CIZ" secondAttribute="bottom" constant="50" id="sIe-f7-wJY"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
